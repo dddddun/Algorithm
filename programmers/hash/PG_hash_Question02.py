@@ -18,7 +18,7 @@ def solution(phone_book):
                 return False
     return True
 '''
-
+'''
 # 해결 방법 => 길이 순으로 정렬하여 속도를 줄였다.
 def solution(phoneBook):
     answer = True
@@ -28,9 +28,10 @@ def solution(phoneBook):
             if phoneBook[j].startswith(phoneBook[i]):
                 return False
     return answer
+'''
 
 # 딕셔너리를 사용한 정석 풀이
-'''
+
 def solution(phone_book):
     answer = True
     hash_map = {}
@@ -43,6 +44,6 @@ def solution(phone_book):
             if temp in hash_map and temp != phone_number:
                 answer = False
     return answer
-'''
+
 
 solution(["12","123","1235","567","88"])
