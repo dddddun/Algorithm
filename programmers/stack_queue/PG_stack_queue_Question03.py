@@ -23,6 +23,7 @@ def solution(progresses, speeds):
 
 
 # 해설
+'''
 def solution(progresses, speeds):
     Q=[]
     for p, s in zip(progresses, speeds):
@@ -31,4 +32,6 @@ def solution(progresses, speeds):
         else:
             Q[-1][1]+=1
     return [q[1] for q in Q]
+'''
+
 solution([95, 90, 99, 99, 80, 99], [1, 1, 1, 1, 1, 1])
