@@ -21,6 +21,30 @@ def solution(n, computers):
             break
     return answer
 '''
+from collections import deque
+def solution(n, computers):
+    answer = 0
+    ch = [False] * n
+    # ch = [False for i in range(n)] 위의 코드와 같은 의미
+
+    def bfs(x):
+        q = deque()
+        q.append(x)
+        while q:
+            tmp = q.popleft()
+            ch[tmp] = True
+            for i in range(n):
+                if not ch[i] and tmp != i and computers[tmp][i] == 1:
+                    q.append(i)
+
+    while True:
+        if False in ch:
+            bfs(ch.index(False))
+            answer += 1
+        else:
+            break
+    print(answer)
+    return answer
 
 
 
