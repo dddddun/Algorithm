@@ -47,8 +47,8 @@ from collections import deque
 
 def get_adjacent(current, words):
     for word in words:
-        if sum([x != y for x, y in zip(current, word)]) == 1:
-            # print(current, word)
+        if sum([(1 if x != y else 0) for x, y in zip(current, word)]) == 1:
+            #print(current, word)
             yield word
 
 
