@@ -29,6 +29,8 @@ if __name__ == "__main__":
 
 '''
 def combination_with_replacement(L, s, sum):
+    # 굳이 이렇게 풀어야 겠다면, 리스트를 생성해서 쌍을 모두 append 한다. -> [[3, 17], [5, 15], ...]
+    # main 에서 리스트[0][0] + 리스트[0][1]을 출력하는걸로,,,!
     global answer_tmp
     if L == 2:
         if sum == n:
